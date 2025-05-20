@@ -97,5 +97,22 @@ print("The top 5 most frequently used words (excluding stopwords):")
 for word, count in top_5_keywords:
     print(f"- {word} ({count} times)")
 
-    
+
+
+
+print("Summary:")
+
+#total num of exc
+print(f"- The conversation had {total_exchanges} exchanges.")
+
+keywords_only_for_summary = [word for word, count in top_5_keywords]
+
+if keywords_only_for_summary: 
+    print(f"- The conversation primarily about {', '.join(keywords_only_for_summary[:2])} and more")
+else: 
+    print("- The primary topics of the conversation could not be determined.")
+
+
+print(f"- Most common keywords: {', '.join(keywords_only_for_summary)}.")
+
 
