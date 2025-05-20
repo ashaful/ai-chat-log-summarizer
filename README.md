@@ -19,23 +19,24 @@ AI Chat Log Summarizer is a Python-based tool that reads .txt chat logs between 
     * Nature of the conversation (based on keyword topics).
     * Most common keywords.
 
----
+4.  **Project Structure**
 
-## Project Structure
-
-ai-chat-summarizer/
-├── summarizer.py
-├── chat.txt
-├── requirements.txt
-├── README.md
-├── images/             
+```
+ai-chat-log-summarizer/
+│
+├── summarizer.py           
+├── chat.txt               
+├── requirements.txt      
+├── README.md               
+├──          
+│
+├── images/               
 │   ├── parsing_result.png
 │   ├── statistics_output.png
 │   ├── keywords_output.png
 │   └── summary_output.png
-└── .gitignore
+```
 
----
 
 ## Requirements
 
@@ -100,6 +101,7 @@ AI: Sure! Python is a popular programming language known for its readability.
 User: What can I use it for?
 AI: You can use Python for building websites, working with data, creating Artificial Intelligence (AI), and many other things.
 
+
 ## Sample Output
 
 ### Chat Log Parsing Result
@@ -116,6 +118,20 @@ AI: You can use Python for building websites, working with data, creating Artifi
 
 
 ---
+### Future Enhancements (Bonus/Optional)
+
+3.1. Use a simple TF-IDF approach or nltk library for better keyword
+extraction.
+3.2. Allow summarization of multiple chat logs from a folder.
+
+### Others 
+
+> This project was built under a 7–8 hour time constraint to demonstrate NLP basics.
+
+> Reach me at: ashafulazim@gmail.com
+
+
+
 
 
 
