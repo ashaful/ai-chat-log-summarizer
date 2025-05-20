@@ -81,7 +81,21 @@ print(f"Total AI Messages: {total_ai_messages}")
 total_exchanges = total_user_messages + total_ai_messages
 print(f"Total Chat Exchanges: {total_exchanges}")
 
-    
+print("\n   Keyword Analysis")
+
+all_text = " ".join(user_messages + ai_messages).lower()
+
+words = re.findall(r'\b\w+\b', all_text)    #Tokenization
+stop_words = set(stopwords.words('english')) #make a list of stopwords and convert list into set()
+filtered_words = [w for w in words if w not in stop_words] # 
+word_counts = Counter(filtered_words) #count hw many times freq used a word in filtered_words list and returd dict where key/value = word/countvalue
+top_5_keywords = word_counts.most_common(5)
+
+
+print("The top 5 most frequently used words (excluding stopwords):")
+
+for word, count in top_5_keywords:
+    print(f"- {word} ({count} times)")
 
     
 
