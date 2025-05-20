@@ -16,7 +16,7 @@ except FileNotFoundError:
 
 
 user_messages = [] #blank list for user 
-ai_messages = []#blank list for AI
+ai_messages = [] #blank list for AI
 
 current_speaker = None # for remember whose msz is currently store 
 current_message_parts = [] #to store if has mutile lines  
@@ -64,7 +64,22 @@ if ai_messages:
 else:
     print("  No AI messages found.")
 
-print("\n--- Chat Log Parsing Complete ---")
+#  Message Statistics 
+#  mainly doing somg string operation 
+
+print ("\n Message Statistics :")
+
+# user msz count 
+total_user_messages = len(user_messages)
+print(f"Total User of Messages: {total_user_messages}")
+
+#ai msz count
+total_ai_messages = len(ai_messages)
+print(f"Total AI Messages: {total_ai_messages}")
+
+#all msz count 
+total_exchanges = total_user_messages + total_ai_messages
+print(f"Total Chat Exchanges: {total_exchanges}")
 
     
 
